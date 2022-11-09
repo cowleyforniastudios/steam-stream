@@ -4,7 +4,7 @@ This is a script to stream a video to Steam Broadcast from the command line usin
 It can be inconvenient to dedicate a machine to upload a stream for the entire week of a Steam festival, so it might be preferable to stream it from a cloud server.
 Our [blogpost](https://www.cowleyforniastudios.com/2022/11/10/stream-to-steam-from-command-line) introducing this script has some further background.
 
-The script is straightforward to use as long as you are comfortable with SSHing into a Linux server. The core of the script is an invocation of `ffmpeg` similar to the following ():
+The script is straightforward to use as long as you are comfortable with SSHing into a Linux server. The core of the script is an invocation of `ffmpeg` similar to the following:
 
 ```
 ffmpeg \
@@ -52,10 +52,10 @@ Restart=on-abort
 WantedBy=multi-user.target
 ```
 
-Save this in `/etc/systemd/system/steam-stream.service` and run `systemctl daemon-reload && systemctl start steam-stream && systemctl enable steam-stream` and it should be run automatically on boot until you delete the server at the end of the festival.
+Save this in `/etc/systemd/system/steam-stream.service`, run `systemctl daemon-reload && systemctl start steam-stream && systemctl enable steam-stream` and it should be run automatically on boot until you delete the server at the end of the festival.
 
 ## CPU usage
 
 Be sure to check the CPU usage ahead of time.
 If the CPU maxes out you risk losing frames, or dropping the stream entirely.
-You may need to switch to a larger VPS to bring the CPU usage down.
+You may need to switch to a larger VPS.
