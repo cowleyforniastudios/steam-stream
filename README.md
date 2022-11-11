@@ -2,7 +2,7 @@
 
 This is a script to stream a video to Steam Broadcast from the command line using `ffmpeg`.
 It can be inconvenient to dedicate a machine to upload a stream for the entire week of a Steam festival, so it might be preferable to stream it from a cloud server.
-Our [blogpost](https://www.cowleyforniastudios.com/2022/11/10/stream-to-steam-from-command-line) introducing this script has some further background.
+Our [blogpost](https://www.cowleyforniastudios.com/2022/11/11/stream-to-steam-from-command-line) introducing this script has some further background.
 
 The script is straightforward to use as long as you are comfortable with SSHing into a Linux server. The core of the script is an invocation of `ffmpeg` similar to the following:
 
